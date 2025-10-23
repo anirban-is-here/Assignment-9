@@ -1,0 +1,122 @@
+[
+  {
+    "skillId": 1,
+    "skillName": "Beginner Guitar Lessons",
+    "providerName": "Alex Martin",
+    "providerEmail": "alex@skillswap.com",
+    "price": 20,
+    "rating": 4.8,
+    "slotsAvailable": 3,
+    "description": "Learn basic chords, strumming patterns, and simple songs on acoustic guitar. Ideal for complete beginners.",
+    "image": "https://images.unsplash.com/photo-1471478331149-c72f17e33c73?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Z3VpdGFyJTIwbGVzc29ufGVufDB8fDB8fHww&auto=format&fit=crop&q=60&w=600",
+    "category": "Music"
+  },
+  {
+    "skillId": 2,
+    "skillName": "Spoken English Practice",
+    "providerName": "Sara Hossain",
+    "providerEmail": "sara@skillswap.com",
+    "price": 10,
+    "rating": 4.6,
+    "slotsAvailable": 5,
+    "description": "Improve your fluency and confidence through daily English conversations and grammar guidance.",
+    "image": "https://images.unsplash.com/photo-1705573383706-b8b1e5db637a?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8U3Bva2VuJTIwRW5nbGlzaCUyMFByYWN0aWNlfGVufDB8fDB8fHww&auto=format&fit=crop&q=60&w=600",
+    "category": "Language"
+  },
+  {
+    "skillId": 3,
+    "skillName": "Intro to Yoga for Beginners",
+    "providerName": "Priya Sen",
+    "providerEmail": "priya@skillswap.com",
+    "price": 15,
+    "rating": 4.9,
+    "slotsAvailable": 4,
+    "description": "Gentle yoga sessions focusing on flexibility, breathing, and stress relief. Perfect for all ages.",
+    "image": "https://images.unsplash.com/photo-1552196563-55cd4e45efb3?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8eW9nYXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&q=60&w=600",
+    "category": "Fitness"
+  },
+  {
+    "skillId": 4,
+    "skillName": "Web Development Basics",
+    "providerName": "Rafi Chowdhury",
+    "providerEmail": "rafi@skillswap.com",
+    "price": 30,
+    "rating": 4.7,
+    "slotsAvailable": 2,
+    "description": "HTML, CSS, and JavaScript fundamentals for aspiring front-end developers. Hands-on project-based learning.",
+    "image": "https://plus.unsplash.com/premium_photo-1723849222657-e1e48a0a306e?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8V2ViJTIwRGV2ZWxvcG1lbnQlMjBCYXNpY3N8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&q=60&w=600",
+    "category": "Technology"
+  },
+  {
+    "skillId": 5,
+    "skillName": "Photography with DSLR",
+    "providerName": "Nadia Rahman",
+    "providerEmail": "nadia@skillswap.com",
+    "price": 25,
+    "rating": 4.5,
+    "slotsAvailable": 3,
+    "description": "Learn manual mode, composition, and lighting to capture professional-quality photos.",
+    "image": "https://plus.unsplash.com/premium_photo-1674389991678-0836ca77c7f7?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8UGhvdG9ncmFwaHklMjB3aXRoJTIwRFNMUnxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&q=60&w=600",
+    "category": "Art"
+  },
+  {
+    "skillId": 6,
+    "skillName": "Baking Cakes & Pastries",
+    "providerName": "Anika Karim",
+    "providerEmail": "anika@skillswap.com",
+    "price": 18,
+    "rating": 4.9,
+    "slotsAvailable": 4,
+    "description": "Master the art of baking soft, moist cakes and beautiful pastries at home. Includes recipes and demos.",
+    "image": "https://plus.unsplash.com/premium_photo-1664472680005-b9976125009d?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fEJha2luZyUyMENha2VzJTIwJTI2JTIwUGFzdHJpZXN8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&q=60&w=600",
+    "category": "Cooking"
+  },
+  {
+    "skillId": 7,
+    "skillName": "Intro to Graphic Design (Canva)",
+    "providerName": "Tanvir Ahmed",
+    "providerEmail": "tanvir@skillswap.com",
+    "price": 12,
+    "rating": 4.4,
+    "slotsAvailable": 6,
+    "description": "Learn the basics of visual composition, typography, and brand design using free tools like Canva.",
+    "image": "https://images.unsplash.com/photo-1522139137660-4248e04955b8?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8SW50cm8lMjB0byUyMEdyYXBoaWMlMjBEZXNpZ24lMjAoQ2FudmEpfGVufDB8fDB8fHww&auto=format&fit=crop&q=60&w=600",
+    "category": "Design"
+  },
+  {
+    "skillId": 8,
+    "skillName": "Digital Marketing Essentials",
+    "providerName": "Zara Islam",
+    "providerEmail": "zara@skillswap.com",
+    "price": 28,
+    "rating": 4.6,
+    "slotsAvailable": 3,
+    "description": "Understand SEO, social media marketing, and analytics to promote small businesses effectively.",
+    "image": "https://images.unsplash.com/photo-1557838923-2985c318be48?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8RGlnaXRhbCUyME1hcmtldGluZ3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&q=60&w=600",
+    "category": "Business"
+  },
+  {
+    "skillId": 9,
+    "skillName": "Basic Drawing and Sketching",
+    "providerName": "Sabbir Hasan",
+    "providerEmail": "sabbir@skillswap.com",
+    "price": 10,
+    "rating": 4.3,
+    "slotsAvailable": 5,
+    "description": "Learn to draw realistic portraits and nature scenes with pencils and shading techniques.",
+    "image": "https://plus.unsplash.com/premium_photo-1673514503558-e7ed72105d4d?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8RHJhd2luZ3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&q=60&w=600",
+    "category": "Art"
+  },
+  {
+    "skillId": 10,
+    "skillName": "Conversational Japanese",
+    "providerName": "Yuki Tanaka",
+    "providerEmail": "yuki@skillswap.com",
+    "price": 20,
+    "rating": 4.8,
+    "slotsAvailable": 4,
+    "description": "Learn to speak everyday Japanese phrases, introduce yourself, and hold short conversations.",
+    "image": "https://plus.unsplash.com/premium_photo-1682091155599-d24e7f752620?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Q29udmVyc2F0aW9uYWwlMjBKYXBhbmVzZXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&q=60&w=600",
+    "category": "Language"
+  }
+]
