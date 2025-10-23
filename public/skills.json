@@ -118,5 +118,29 @@
     "description": "Learn to speak everyday Japanese phrases, introduce yourself, and hold short conversations.",
     "image": "https://plus.unsplash.com/premium_photo-1682091155599-d24e7f752620?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Q29udmVyc2F0aW9uYWwlMjBKYXBhbmVzZXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&q=60&w=600",
     "category": "Language"
-  }
+  },
+  {
+  "skillId": 11,
+  "skillName": "Beginner Piano Lessons",
+  "providerName": "Liam Carter",
+  "providerEmail": "liam@skillswap.com",
+  "price": 25,
+  "rating": 4.7,
+  "slotsAvailable": 4,
+  "description": "Learn the basics of piano playing in fun, interactive sessions.",
+  "image": "https://plus.unsplash.com/premium_photo-1673804248447-5a405ff3ddbd?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8cGlhbm98ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&q=60&w=600",
+  "category": "Music"
+},
+{
+  "skillId": 12,
+  "skillName": "Yoga for Beginners",
+  "providerName": "Emma Johnson",
+  "providerEmail": "emma@skillswap.com",
+  "price": 15,
+  "rating": 4.9,
+  "slotsAvailable": 6,
+  "description": "Introductory yoga sessions to improve flexibility and wellness.",
+  "image": "https://plus.unsplash.com/premium_photo-1661776042506-9154882ba689?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fHlvZ2F8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&q=60&w=600",
+  "category": "Wellness"
+}
 ]

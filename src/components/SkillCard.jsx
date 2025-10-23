@@ -13,7 +13,7 @@ const SkillCard = ({ skill }) => {
         <img
           src={image}
           alt={skillName}
-          className="object-cover w-full h-full hover:scale-105 transition-transform duration-300"
+          className="object-cover rounded-lg w-full h-full hover:scale-105 transition-transform duration-300"
         />
       </div>
 

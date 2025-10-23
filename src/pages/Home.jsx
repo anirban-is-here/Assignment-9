@@ -6,7 +6,7 @@ import SkillCard from "../components/SkillCard";
 
 const Home = () => {
   const { skills, loading } = useContext(SkillsContext);
-  const topSkills = skills.slice(0, 6);
+  
 
   return (
     <>
@@ -29,8 +29,8 @@ const Home = () => {
               categories.
             </p>
             <div className="flex flex-col items-center">
-              <div className="grid grid-cols-3 gap-7  ">
-                {topSkills.map((s) => (
+              <div className="grid grid-cols-3 gap-7 h-175 overflow-auto ">
+                {skills.map((s) => (
                   <SkillCard key={s.skillId} skill={s}></SkillCard>
                 ))}
               </div>

@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router";
+import { Link, useNavigate } from "react-router";
 import { UserPlus } from "lucide-react";
 import toast, { Toaster } from "react-hot-toast";
 import { useAuth } from "../contexts/AuthContext";
@@ -7,6 +7,8 @@ import { useAuth } from "../contexts/AuthContext";
 const Signup = () => {
 
     const { createUser,  googleSignIn, user} = useAuth();
+    const navigate = useNavigate();
+
 
     const handleLogin =(event)=> {
         event.preventDefault();
@@ -15,7 +17,10 @@ const Signup = () => {
         const password = event.target.password.value;
 
         createUser(email, password)
-        .then((result)=> console.log(result.user))
+        .then((result)=> {
+            console.log(result.user)
+            navigate('/')
+        })
         .catch((error) => console.log(error))
 
         
@@ -24,7 +29,12 @@ const Signup = () => {
     }
 
     const handleGoogleSignin = () => {
-        googleSignIn();
+        googleSignIn()
+        .then((result) => {
+            console.log(result.user)
+            navigate('/')
+    
+        })
         console.log (user)
     }
   return (
