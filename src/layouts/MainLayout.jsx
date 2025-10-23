@@ -10,11 +10,11 @@ const MainLayout = () => {
         <Navbar />
       </div>
 
-      <div className="pt-10  container mx-auto">
+      <div className="pt-10  container mx-auto flex-1 overflow-auto">
         <Outlet />
       </div>
 
-      <div className="container mx-auto ">
+      <div className="container mx-auto fixed bottom-0 left-0 w-full z-50 ">
         <Footer />
       </div>
     </div>

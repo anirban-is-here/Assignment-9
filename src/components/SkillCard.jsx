@@ -4,7 +4,7 @@ import { Star } from "lucide-react";
 const SkillCard = ({ skill }) => {
     if (!skill) return null;
   const { image, skillName, rating, price } = skill;
-  console.log(skill);
+  
 
   return (
     <div className="bg-base-100 lg:h-83 border border-base-200 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 overflow-hidden flex flex-col">
