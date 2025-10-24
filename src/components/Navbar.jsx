@@ -34,12 +34,12 @@ const Navbar = () => {
       {/* right part */}
 
       {user ? (
-        <div className="flex gap-5">
-            <div className="tooltip tooltip-bottom" data-tip={user?.displayName || "User"}>
+        <div className="flex gap-5 items-center">
+            <div className="tooltip tooltip-bottom " data-tip={user?.displayName || "User"}>
                 <img
               src={user.photoURL || "https://w7.pngwing.com/pngs/205/731/png-transparent-default-avatar.png"}
               alt={user.displayName || "User Avatar"}
-              className="w-10 h-10 rounded-full cursor-pointer"
+              className="w-12 h-12 rounded-full cursor-pointer border-2 border-primary"
             />
             </div>
             <button onClick={handleLogOut} className="btn btn-neutral btn-outline">LogOut</button>

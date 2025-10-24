@@ -2,12 +2,12 @@ import { createContext, useEffect, useState } from "react";
 
 export const SkillsContext = createContext();
 
-const SkillsProvider = ( {children} ) => {
-    const [skills, setSkills] = useState([]);
+const SkillsProvider = ({ children }) => {
+  const [skills, setSkills] = useState([]);
 
-    const[loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(true);
 
-    useEffect(() => {
+  useEffect(() => {
     fetch("/skills.json")
       .then((res) => res.json())
       .then((data) => {
@@ -17,14 +17,11 @@ const SkillsProvider = ( {children} ) => {
       .catch((err) => console.log(err));
   }, []);
 
-
-
-    return (<SkillsContext.Provider value= {{skills}}>
-        {children} </SkillsContext.Provider>
-        );
+  return (
+    <SkillsContext.Provider value={{ skills }}>
+      {children}{" "}
+    </SkillsContext.Provider>
+  );
 };
 
 export default SkillsProvider;
-
-
-

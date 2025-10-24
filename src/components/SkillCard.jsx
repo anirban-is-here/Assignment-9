@@ -1,9 +1,12 @@
 import React from "react";
 import { Star } from "lucide-react";
+import { Link } from "react-router";
 
 const SkillCard = ({ skill }) => {
     if (!skill) return null;
   const { image, skillName, rating, price } = skill;
+
+  
   
 
   return (
@@ -37,9 +40,10 @@ const SkillCard = ({ skill }) => {
 
         {/* Button */}
         <div className="mt-3">
-          <button className="btn btn-xs w-full h-10 bg-primary/80 text-accent-content text-lg hover:scale-105 transform transition-transform duration-300 ease-in-out">
+          <Link to={`/skilldetail/${skill.id}`}>
+          <button  className="btn btn-xs w-full h-10 bg-primary/80 text-accent-content text-lg hover:scale-105 transform transition-transform duration-300 ease-in-out">
             View Details
-          </button>
+          </button></Link>
         </div>
       </div>
     </div>

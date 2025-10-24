@@ -1,7 +1,8 @@
-import { createUserWithEmailAndPassword } from "firebase/auth/cordova";
+
 import { createContext, useContext, useEffect, useState } from "react";
 import auth from "../firebase/firebase.init";
 import {
+  createUserWithEmailAndPassword,
   GoogleAuthProvider,
   onAuthStateChanged,
   signInWithEmailAndPassword,

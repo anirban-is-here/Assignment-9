@@ -1,11 +1,16 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Mail, User, Clock, Star } from "lucide-react";
+import { SkillsContext } from "../contexts/SkillsContext";
+import { useParams } from "react-router";
 
 const SkillDetails = () => {
+  const { id } = useParams();
+  const { skills } = useContext(SkillsContext);
+  console.log(skills, id);
   return (
     <div className="max-w-6xl mx-auto px-6 py-12 space-y-10">
       {/* Skill Information Section */}
-      <div className="bg-base-100 shadow-lg rounded-2xl p-8 flex flex-col lg:flex-row gap-8 hover:shadow-xl transition-all duration-300">
+      <div className="bg-base-300 shadow-lg rounded-2xl p-8 flex flex-col lg:flex-row gap-8 hover:shadow-xl transition-all duration-300">
         {/* Image */}
         <div className="lg:w-1/2">
           <img
@@ -57,7 +62,7 @@ const SkillDetails = () => {
       </div>
 
       {/* Book Session Form */}
-      <div className="bg-base-100 shadow-lg rounded-2xl p-8 hover:shadow-xl transition-all duration-300">
+      <div className="bg-secondary/20 shadow-lg rounded-2xl p-8 hover:shadow-xl transition-all duration-300">
         <h3 className="text-2xl font-semibold text-base-content mb-4">
           Book a Session
         </h3>
