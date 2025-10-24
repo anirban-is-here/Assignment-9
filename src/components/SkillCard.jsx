@@ -6,6 +6,8 @@ const SkillCard = ({ skill }) => {
     if (!skill) return null;
   const { image, skillName, rating, price } = skill;
 
+
+  console.log(skill.skillId)
   
   
 
@@ -40,7 +42,7 @@ const SkillCard = ({ skill }) => {
 
         {/* Button */}
         <div className="mt-3">
-          <Link to={`/skilldetail/${skill.id}`}>
+          <Link to={`/skilldetail/${skill.skillId}`}>
           <button  className="btn btn-xs w-full h-10 bg-primary/80 text-accent-content text-lg hover:scale-105 transform transition-transform duration-300 ease-in-out">
             View Details
           </button></Link>

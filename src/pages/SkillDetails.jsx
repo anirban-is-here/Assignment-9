@@ -1,12 +1,15 @@
 import React, { useContext } from "react";
-import { Mail, User, Clock, Star } from "lucide-react";
+import { Clock, Star, User, Mail, BookOpen } from "lucide-react";
 import { SkillsContext } from "../contexts/SkillsContext";
 import { useParams } from "react-router";
 
 const SkillDetails = () => {
   const { id } = useParams();
   const { skills } = useContext(SkillsContext);
-  console.log(skills, id);
+
+  
+  const skill = skills.find((s) => s.skillId === parseInt(id));
+  
   return (
     <div className="max-w-6xl mx-auto px-6 py-12 space-y-10">
       {/* Skill Information Section */}
@@ -14,8 +17,8 @@ const SkillDetails = () => {
         {/* Image */}
         <div className="lg:w-1/2">
           <img
-            src="https://i.ibb.co.com/Q0gTjBD/provider4.jpg"
-            alt="Skill Thumbnail"
+            src={skill.image}
+            alt={skill.skillName}
             className="rounded-xl object-cover w-full h-72"
           />
         </div>
@@ -23,11 +26,10 @@ const SkillDetails = () => {
         {/* Details */}
         <div className="lg:w-1/2 space-y-4">
           <h2 className="text-4xl font-bold text-base-content">
-            Guitar Mastery
+            {skill.skillName}
           </h2>
           <p className="text-base-content/80 leading-relaxed">
-            Learn how to play the guitar from beginner to advanced level with
-            personalized sessions and expert guidance.
+            {skill.description}
           </p>
 
           <div className="divider my-4"></div>
@@ -35,7 +37,7 @@ const SkillDetails = () => {
           <div className="grid grid-cols-2 gap-4 text-base-content/90">
             <div>
               <p className="text-sm text-base-content/60">Category</p>
-              <p className="font-medium">Music</p>
+              <p className="font-medium">{skill.category}</p>
             </div>
             <div>
               <p className="text-sm text-base-content/60">Level</p>
@@ -50,13 +52,18 @@ const SkillDetails = () => {
             <div>
               <p className="text-sm text-base-content/60">Rating</p>
               <p className="font-medium flex items-center gap-1">
-                <Star className="w-4 h-4 text-warning" /> 4.9 / 5
+                <Star className="w-4 h-4 text-warning" /> {skill.rating}
               </p>
             </div>
           </div>
 
-          <div className="mt-4">
-            <span className="badge badge-primary text-sm">By Arian Stone</span>
+          <div className="flex items-center gap-5">
+            <div className="">
+            <span className="badge badge-primary text-sm">{skill.providerName}</span>
+          </div>
+          <div className="badge badge-primary text-sm">
+            {skill.providerEmail}
+          </div>
           </div>
         </div>
       </div>
