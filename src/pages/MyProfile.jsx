@@ -1,5 +1,6 @@
 import React from "react";
 import { useAuth } from "../contexts/AuthContext";
+import { Link } from "react-router";
 
 const MyProfile = () => {
   const { user } = useAuth();
@@ -26,9 +27,10 @@ const MyProfile = () => {
 
         {/* Update Profile Button */}
         <div className="flex justify-center">
+          <Link to='/updateProfile'>
           <button className="btn btn-primary w-full hover:scale-105 transition-transform duration-300">
             Update Profile
-          </button>
+          </button></Link>
         </div>
       </div>
     </div>

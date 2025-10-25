@@ -1,6 +1,7 @@
-import { createContext, useEffect, useState } from "react";
+import { createContext, useContext, useEffect, useState } from "react";
 
-export const SkillsContext = createContext();
+const SkillsContext = createContext();
+export const useSkills = () => useContext(SkillsContext);
 
 const SkillsProvider = ({ children }) => {
   const [skills, setSkills] = useState([]);
@@ -18,8 +19,8 @@ const SkillsProvider = ({ children }) => {
   }, []);
 
   return (
-    <SkillsContext.Provider value={{ skills }}>
-      {children}{" "}
+    <SkillsContext.Provider value={{ skills, loading }}>
+      {children}
     </SkillsContext.Provider>
   );
 };

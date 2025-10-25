@@ -6,6 +6,7 @@ import Signup from "../pages/Signup";
 import SkillDetails from "../pages/SkillDetails";
 import MyProfile from "../pages/MyProfile";
 import PrivateRoute from "./PrivateRoute";
+import UpdateProfile from "../pages/UpdateProfile";
 export const router = createBrowserRouter([
   {
     path: "/",
@@ -40,6 +41,15 @@ export const router = createBrowserRouter([
         element: (
         <PrivateRoute>
           <MyProfile/>
+        </PrivateRoute>
+        ),
+      },
+
+      {
+        path: "updateProfile",
+        element: (
+        <PrivateRoute>
+          <UpdateProfile/>
         </PrivateRoute>
         ),
       },

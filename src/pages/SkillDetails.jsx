@@ -1,15 +1,19 @@
-import React, { useContext } from "react";
+import React from "react";
 import { Clock, Star, User, Mail, BookOpen } from "lucide-react";
-import { SkillsContext } from "../contexts/SkillsContext";
+
+import { useSkills } from "../contexts/SkillsContext";
 import { useParams } from "react-router";
+import { toast, Toaster } from "react-hot-toast";
 
 const SkillDetails = () => {
   const { id } = useParams();
-  const { skills } = useContext(SkillsContext);
 
-  
+  const { skills, loading } = useSkills();
+  if (loading) return <p>Still loading</p>
+
   const skill = skills.find((s) => s.skillId === parseInt(id));
   
+
   return (
     <div className="max-w-6xl mx-auto px-6 py-12 space-y-10">
       {/* Skill Information Section */}
@@ -59,11 +63,13 @@ const SkillDetails = () => {
 
           <div className="flex items-center gap-5">
             <div className="">
-            <span className="badge badge-primary text-sm">{skill.providerName}</span>
-          </div>
-          <div className="badge badge-primary text-sm">
-            {skill.providerEmail}
-          </div>
+              <span className="badge badge-primary text-sm">
+                {skill.providerName}
+              </span>
+            </div>
+            <div className="badge badge-primary text-sm">
+              {skill.providerEmail}
+            </div>
           </div>
         </div>
       </div>
@@ -78,7 +84,12 @@ const SkillDetails = () => {
           to schedule your session.
         </p>
 
-        <form className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+        <form
+          onSubmit={() => {
+            toast("Success");
+          }}
+          className="grid grid-cols-1 sm:grid-cols-2 gap-6"
+        >
           {/* Name */}
           <div className="col-span-2 sm:col-span-1">
             <label className="label">
@@ -90,6 +101,7 @@ const SkillDetails = () => {
               <User className="absolute left-3 top-3 w-5 h-5 text-base-content/60" />
               <input
                 type="text"
+                required
                 placeholder="Your Name"
                 className="input input-bordered w-full pl-10"
               />
@@ -107,24 +119,11 @@ const SkillDetails = () => {
               <Mail className="absolute left-3 top-3 w-5 h-5 text-base-content/60" />
               <input
                 type="email"
+                required
                 placeholder="you@example.com"
                 className="input input-bordered w-full pl-10"
               />
             </div>
-          </div>
-
-          {/* Message */}
-          <div className="col-span-2">
-            <label className="label">
-              <span className="label-text font-medium text-base-content">
-                Message
-              </span>
-            </label>
-            <textarea
-              className="textarea textarea-bordered w-full"
-              placeholder="Tell us what you want to learn..."
-              rows="4"
-            ></textarea>
           </div>
 
           {/* Button */}
@@ -135,6 +134,7 @@ const SkillDetails = () => {
             >
               Submit Request
             </button>
+            <Toaster />
           </div>
         </form>
       </div>

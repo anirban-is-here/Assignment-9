@@ -1,12 +1,18 @@
 import { useContext } from "react";
 import { AuthContext } from "../contexts/AuthContext";
 
+import toast, { Toaster } from "react-hot-toast";
+
 const Profile = () => {
   const { user } = useContext(AuthContext);
-  if (!user) return <p className="text-center mt-10">Please log in to view your profile.</p>;
+  if (!user)
+    return (
+      <p className="text-center mt-10">Please log in to view your profile.</p>
+    );
 
   return (
     <div className="text-center mt-10">
+      <Toaster />
       <img
         src={user.photoURL || "https://i.ibb.co/0Jmshvb/user.png"}
         alt="avatar"

@@ -1,12 +1,12 @@
 import React, { useContext } from "react";
 import HeroSlider from "../components/HeroSlider";
 import HowItWorks from "../components/HowItWorks";
-import SkillsProvider, { SkillsContext } from "../contexts/SkillsContext";
+
 import SkillCard from "../components/SkillCard";
+import { useSkills } from "../contexts/SkillsContext";
 
 const Home = () => {
-  const { skills, loading } = useContext(SkillsContext);
-  
+  const { skills, loading } = useSkills();
 
   return (
     <>
