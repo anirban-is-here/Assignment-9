@@ -1,17 +1,21 @@
-import { useContext } from "react"
+
 import toast from "react-hot-toast";
-import { useLocation } from "react-router";
+import { Navigate, useLocation } from "react-router";
+import { useAuth } from "../contexts/AuthContext";
 
 
 
 const PrivateRoute = ({ children }) => {
-    const { user, loading } = useContext(AuthContext);
+    const { user, loading } = useAuth();
     const location = useLocation();
 
     if(loading) return toast("Wait! data is loading")
 
         if(!user) {
-            return <Navigate></Navigate>
+            return <Navigate to="/login" state = {{ from: location }} replace/>
         }
-}
-}
+
+        return children;
+};
+
+export default PrivateRoute;

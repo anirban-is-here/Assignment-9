@@ -1,11 +1,14 @@
 import React, {  useState } from "react";
-import { Link, useNavigate } from "react-router";
+import { Link, useLocation, useNavigate } from "react-router";
 import { useAuth } from "../contexts/AuthContext";
 
 const Login = () => {
   const { loginUser, googleSignIn } = useAuth();
   const [error, setError] = useState("");
   const navigate = useNavigate();
+  const location = useLocation();
+
+  const from = location.state?.from?.pathname || '/';
 
   const handleLogin = async (e) => {
     e.preventDefault();
@@ -17,6 +20,7 @@ const Login = () => {
       await loginUser(email, password);
       form.reset();
       navigate("/");
+      navigate(from, { replace: true });
     } catch (err) {
       setError(err.message);
     }
@@ -26,6 +30,7 @@ const Login = () => {
     try {
       await googleSignIn();
       navigate("/");
+      navigate(from, { replace: true });
     } catch (err) {
       setError(err.message);
     }

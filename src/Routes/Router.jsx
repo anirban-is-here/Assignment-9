@@ -5,7 +5,7 @@ import Login from "../pages/Login";
 import Signup from "../pages/Signup";
 import SkillDetails from "../pages/SkillDetails";
 import MyProfile from "../pages/MyProfile";
-
+import PrivateRoute from "./PrivateRoute";
 export const router = createBrowserRouter([
   {
     path: "/",
@@ -29,7 +29,11 @@ export const router = createBrowserRouter([
       },
       {
         path: "skilldetail/:id",
-        element: <SkillDetails />,
+        element: (
+        <PrivateRoute>
+          <SkillDetails />
+        </PrivateRoute>
+        ),
       },
       {
         path: "profile",
