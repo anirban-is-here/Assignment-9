@@ -3,7 +3,7 @@ import { useAuth } from "../contexts/AuthContext";
 
 const Navbar = () => {
   const { user, logoutUser } = useAuth();
-    console.log(user)
+  console.log(user);
   const handleLogOut = () => {
     logoutUser();
   };
@@ -23,10 +23,10 @@ const Navbar = () => {
               <a>Home</a>
             </li>
           </NavLink>
-          <NavLink to={user?'/profile':'/login'}>
-          <li>
-            <a>My Profile</a>
-          </li>
+          <NavLink to={"/profile"}>
+            <li>
+              <a>My Profile</a>
+            </li>
           </NavLink>
         </ul>
       </div>
@@ -35,14 +35,25 @@ const Navbar = () => {
 
       {user ? (
         <div className="flex gap-5 items-center">
-            <div className="tooltip tooltip-bottom " data-tip={user?.displayName || "User"}>
-                <img
-              src={user.photoURL || "https://w7.pngwing.com/pngs/205/731/png-transparent-default-avatar.png"}
+          <div
+            className="tooltip tooltip-bottom "
+            data-tip={user?.displayName || "User"}
+          >
+            <img
+              src={
+                user.photoURL ||
+                "https://w7.pngwing.com/pngs/205/731/png-transparent-default-avatar.png"
+              }
               alt={user.displayName || "User Avatar"}
               className="w-12 h-12 rounded-full cursor-pointer border-2 border-primary"
             />
-            </div>
-            <button onClick={handleLogOut} className="btn btn-neutral btn-outline">LogOut</button>
+          </div>
+          <button
+            onClick={handleLogOut}
+            className="btn btn-neutral btn-outline"
+          >
+            LogOut
+          </button>
         </div>
       ) : (
         <div className="flex gap-3">

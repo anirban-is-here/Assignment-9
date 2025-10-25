@@ -7,7 +7,7 @@ const SkillCard = ({ skill }) => {
   const { image, skillName, rating, price } = skill;
 
 
-  console.log(skill.skillId)
+  
   
   
 

@@ -9,6 +9,7 @@ const Login = () => {
   const location = useLocation();
 
   const from = location.state?.from?.pathname || '/';
+  console.log("Redirecting after login to:", from);
 
   const handleLogin = async (e) => {
     e.preventDefault();
